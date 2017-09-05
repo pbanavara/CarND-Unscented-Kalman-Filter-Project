@@ -85,7 +85,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
           0, 0, 1, 0, 0,
           0, 0, 0, 1, 0,
           0, 0, 0, 0, 1;
-    time_us_ = meas_package.timestamp_;
+    time_elapsed_ = meas_package.timestamp_;
     if (meas_package.sensor_type_ == MeasurementPackage::LASER) {
       x_(0) = meas_package.raw_measurements_(0);
       x_(1) = meas_package.raw_measurements_(1);
